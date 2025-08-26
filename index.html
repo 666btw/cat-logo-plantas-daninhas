@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Safras do Paraná • Catálogo de Plantas Daninhas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-row">
+      <h1 class="brand">
+        <span class="brand-icon">🌱</span>
+        Safras do Paraná 2024/25
+      </h1>
+      <nav class="user-meta" aria-label="Usuário">
+        <span id="hello-user" class="hello"></span>
+        <button id="btn-logout" class="btn btn-ghost" title="Sair">Sair</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="screen-login" class="screen active" aria-labelledby="login-title">
+    <section class="card card--centered container-narrow">
+      <h2 id="login-title" class="title-xl">Catálogo de Plantas Daninhas do Paraná</h2>
+      <p class="subtitle">Entre com seu nome para começar</p>
+
+      <form id="login-form" class="login-form" autocomplete="off">
+        <label for="username" class="sr-only">Seu nome</label>
+        <input id="username" name="username" type="text" placeholder="Digite seu nome" required />
+        <button id="btn-login" type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <main id="screen-chooser" class="screen" aria-labelledby="chooser-title">
+    <section class="container">
+      <h2 id="chooser-title" class="title-lg">Escolha a safra para explorar</h2>
+      <div id="crop-grid" class="crop-grid" role="list"></div>
+    </section>
+  </main>
+
+  <main id="screen-crop" class="screen" aria-labelledby="crop-title">
+    <div class="crop-topbar">
+      <button id="btn-back" class="btn btn-back" type="button" title="Voltar">
+        <span aria-hidden="true">←</span> Voltar
+      </button>
+    </div>
+
+    <section class="container">
+      <h2 id="crop-title" class="title-lg"></h2>
+      <p id="crop-lead" class="lead"></p>
+      <div id="crop-facts" class="facts"></div>
+
+      <div class="actions">
+        <button id="btn-show-plants" class="btn btn-accent" type="button">
+          Ver plantas daninhas
+        </button>
+      </div>
+
+      <div id="catalog" class="catalog" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-row">
+      <small>Projeto educacional • Agronegócio Paranaense</small>
+      <small>Uso responsável • Manejo Integrado de Plantas Daninhas (MIPD)</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
